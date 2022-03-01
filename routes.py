@@ -6,17 +6,17 @@ from bottle import route, view
 from datetime import datetime
 
 @route('/')
-@route('/home')
-@view('index')
-def home():
+@route('/general')
+@view('general')
+def general():
     """Renders the home page."""
     return dict(
         year=datetime.now().year
     )
 
-@route('/contact')
-@view('contact')
-def contact():
+@route('/lore')
+@view('lore')
+def lore():
     """Renders the contact page."""
     return dict(
         title='Contact',
@@ -24,9 +24,19 @@ def contact():
         year=datetime.now().year
     )
 
-@route('/about')
-@view('about')
-def about():
+@route('/characters')
+@view('characters')
+def characters():
+    """Renders the about page."""
+    return dict(
+        title='About',
+        message='Your application description page.',
+        year=datetime.now().year
+    )
+
+@route('/regions')
+@view('regions')
+def regions():
     """Renders the about page."""
     return dict(
         title='About',
