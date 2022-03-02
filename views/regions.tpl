@@ -11,7 +11,7 @@
 		   A:active { text-decoration: none; }
 		   A:hover {
 			text-decoration: none; 
-			color: white; /* ÷вет ссылки */
+			color: white; /* ÷вет  ссылки */
 		   } 
 		</style>	
 	</head>
