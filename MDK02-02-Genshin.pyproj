@@ -38,6 +38,7 @@
     <Folder Include="static\fonts\" />
     <Folder Include="static\images\" />
     <Folder Include="static\images\row\" />
+    <Folder Include="static\images2\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
@@ -72,7 +73,15 @@
     <Content Include="static\images\template.psd" />
     <Content Include="static\images\template_in.jpg" />
     <Content Include="static\images\template_li.jpg" />
-    <Content Include="static\images\template_mon.jpg" />
+    <Content Include="static\images2\ayaka.jpg" />
+    <Content Include="static\images2\back.jpg" />
+    <Content Include="static\images2\djinn.jpg" />
+    <Content Include="static\images2\ember.jpg" />
+    <Content Include="static\images2\lumenAndIter.jpg" />
+    <Content Include="static\images2\nin_guan.jpg" />
+    <Content Include="static\images2\paimon.png" />
+    <Content Include="static\images2\rayden.jpg" />
+    <Content Include="static\images2\syao.jpg" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
