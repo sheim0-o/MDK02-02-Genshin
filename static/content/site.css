@@ -40,3 +40,64 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    position: static;
+}
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: url(../img/Wn0CrYWSK34.png);
+        background-size: cover;
+        z-index: 0;
+    }
+
+    header div {
+        position: absolute;
+        z-index: 1;
+        top: 0%;
+        right: 40%;
+    }
+
+    header h1 {
+        font-size: 8rem;
+        font-weight: 700;
+        color: #2302f7;
+        position: static;
+        bottom: 50px;
+    }
+
+    header h2 {
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+.wrapper {
+    height: 1500vh;
+}
+
+.parallax-img {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/f2d6a3a.png);
+}
+h1 {
+    margin: 15px;
+    text-align: center;
+}
+
+p {
+    margin: 15px;
+    font-size: 1.1rem;
+}
