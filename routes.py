@@ -29,7 +29,7 @@ def lore():
 def characters():
     """Renders the about page."""
     return dict(
-        title='About',
+        title='Characters',
         message='Your application description page.',
         year=datetime.now().year
     )
