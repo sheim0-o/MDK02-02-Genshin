@@ -1,11 +1,12 @@
 % rebase('layout.tpl', title=title, year=year)
 <html>
+	<!-- Çàãîëîâîê ñòðàíèöû -->
 	<head>
 		<meta charset="latin9">
 		<h1>Ïåðñîíàæè</h1>
 		<li><font size="3"><a href="https://genshin-impact.fandom.com/ru/wiki/Genshin_Impact_Âèêè">Èíôîðìàöèÿ î ïåðñîíàæàõ</a></font></li>
 	</head>
-
+	<!-- Îñíîâíîå òåëî ñàéòà (ñîñòîèò èç áëîêîâ, ñîäåðæàùèõ èçîáðàæåíèÿ, çàãîëîâêè è òåêñò) -->
 	<body id="characters">
 		<h2><font size="5">Ïóòåøåñòâåííèê/Ïóòåøåñòâåííèöà</font></h2>
 		<img src="static/images2/lumenAndIter.jpg" width="400" height="250">
@@ -71,6 +72,4 @@
 		<p>Îáëàäàÿ ìîùüþ ãðîìà è ìîëíèé, îíà ñëåäóåò îäèíîêèì ïóòåì, íîñÿùèì èìÿ âå÷íîñòè.</p></font>
 		<p> <br></p>
 	</body>
-
-
 </html>
