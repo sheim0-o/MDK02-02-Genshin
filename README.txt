@@ -1,3 +1,5 @@
+GENSHIN IMPACT PROJECT
+
 IMPLEMENTED FUNCTIONALITY:
 The program is an information site on the game Genshin Impact.
 Pages of different sections of the site with information 
