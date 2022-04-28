@@ -2,9 +2,8 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view
 from datetime import datetime
-from bottle import response
+from bottle import response, route, view
 
 @route('/')
 @route('/general')
@@ -42,5 +41,37 @@ def regions():
     return dict(
         title='About',
         message='Your application description page.',
+        year=datetime.now().year
+    )
+
+@route('/reviews')
+@view('reviews')
+def reviews():
+    """Renders the about page."""
+    return dict(
+        year=datetime.now().year
+    )
+
+@route('/articles')
+@view('articles')
+def articles():
+    """Renders the about page."""
+    return dict(
+        year=datetime.now().year
+    )
+
+@route('/orders')
+@view('orders')
+def orders():
+    """Renders the about page."""
+    return dict(
+        year=datetime.now().year
+    )
+
+@route('/novelties')
+@view('novelties')
+def novelties():
+    """Renders the about page."""
+    return dict(
         year=datetime.now().year
     )

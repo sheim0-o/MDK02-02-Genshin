@@ -25,6 +25,11 @@
                     <li><a href="/lore">Lore</a></li>
                     <li><a href="/characters">Characters</a></li>
                     <li><a href="/regions">Regions</a></li>
+
+                    <li><a href="/reviews">Reviews</a></li>
+                    <li><a href="/articles">Useful articles</a></li>
+                    <li><a href="/orders">Completed orders</a></li>
+                    <li><a href="/novelties">Current novelties</a></li>
                 </ul>
             </div>
         </div>

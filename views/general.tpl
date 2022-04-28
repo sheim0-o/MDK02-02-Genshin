@@ -77,5 +77,11 @@
             </div>
             <!-- —сылка референса -->
             <a href="https://genshin.hoyoverse.com/ru/game" class="btn">ѕереход по ссылке</a>
+        <h3> Ask a Question </h3>
+        <form action="/home" method="post">
+            <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
+            <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
+            <p><input type="submit" value="Send" class="btn btn-default"></p>
+        </form>
     </body>
 </html>

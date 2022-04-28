@@ -23,6 +23,9 @@ body {
     background: #000 url(../images2/back.jpg);
     color: #fff
 }
+#characters_font{
+    font-size: 5px;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -96,6 +99,31 @@ header {
     }
 
     header h2 {
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+header_char {
+    width: 100%;
+    min-height: 100vh;
+    position: static;
+}
+
+    header_char div {
+        position: absolute;
+        z-index: 1;
+        top: 0%;
+        right: 40%;
+    }
+
+    header_char h1 {
+        font-size: 8rem;
+        font-weight: 700;
+        position: static;
+        bottom: 50px;
+    }
+
+    header_char h2 {
         font-size: 2.2rem;
         font-weight: 300;
     }
