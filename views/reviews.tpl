@@ -1,8 +1,54 @@
 % rebase('layout.tpl', title=title, year=year)
+% import json
 
-<html>
-<head>
-<meta charset="latin9">
-</head>
+<header_char>
+	<head>
+		<h1>Îòçûâû</h1>
+        <meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+	</head>
 
-</html>
+	<body id="reviews">
+		<form id="form_user_review">
+			<h3> Îñòàâüòå ñâîé îòçûâ! </h3>
+			<p><textarea input type="text" rows="3" cols="100" name="REVIEW" placeholder="Çäåñü âû ìîæåòå îñòàâèòü ñâîé îòçûâ..." id="review"></textarea></p> 
+			<p><input type="text" name="MAIL" placeholder="Ââåäèòå ïî÷òó..." id="mail" 
+			pattern="^[a-zA-Z0-9_.+-]+@[a-z]+.[a-z]{2,3}$" title="Ââåäèòå ïî÷òó â óêàçàííîì ôîðìàòå - test@mail.ru"></p>
+			<p><input type="text" name="PHONE" placeholder="Ââåäèòå íîìåð òåëåôîíà..." id="phone" 
+			pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Ââåäèòå íîìåð òåëåôîíà â óêàçàííîì ôîðìàòå - +#(###)###-##-##"></p>
+			<p>Åñëè â ñïèñêå îòçûâîâ óæå èìååòñÿ âàøà ýëåêòðîííàÿ ïî÷òà, òî íîìåð òåëåôîíà áóäåò èçìåíåí íà íîâûé</p>
+			<p><input type="submit" value="Îòïðàâèòü" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
+		</form>
+
+		<br /><br /><br />
+		<h3> Îòçûâû äðóãèõ ïîëüçîâàòåëåé: </h3>
+		<% reviews = [] %>
+		<% try: %>
+		<% with open('reviews.txt',encoding='latin1') as json_file: %>
+			<% reviews = json.load(json_file) %>
+		<% end %>
+		<% except: %>
+		<% pass %>
+		<% end %>
+		<% if len(reviews) > 0: %>
+			<% for i in range(len(reviews)): %>
+				<% c = len(reviews) - i -1 %>
+				<% user_reviews = reviews[c]['review'] %>
+				<% date_of_reviews = reviews[c]['date'] %>
+
+				<form id="form_reviews_{{c+1}}">
+					<h2>{{reviews[c]['mail']}}</h2>
+					<h3>{{reviews[c]['phone']}}</h3>
+
+						<ol>
+							<% for j in range(len(user_reviews)): %>
+								<p><textarea input type="text" rows="3" cols="50">{{user_reviews[j]}}</textarea></p>
+								<p>{{date_of_reviews[j]}}</p>
+							<% end %>
+						</ol>
+				</form>
+			<% end %>
+		<% end %>
+	</body>
+<script src="/static/scripts/scrLogicReviews.js"></script>
+</header_char>

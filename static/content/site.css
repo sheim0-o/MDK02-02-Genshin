@@ -124,8 +124,23 @@ header_char {
     }
 
     header_char h2 {
-        font-size: 2.2rem;
+        font-size: 3rem;
         font-weight: 300;
+    }
+
+    header_char h3 {
+        font-size: 2rem;
+        font-weight: 250;
+    }
+
+    header_char row {
+        position: relative;
+        height: 150px;
+    }
+
+    header_char column {
+        box-sizing: border-box;
+        padding: 20px;
     }
 
 .wrapper {

@@ -33,3 +33,18 @@ Shevtsov Dmitry;
 Melnikova Kristina;
 Kozlyakov Mikhail;
 Sakryukin Alexander.
+
+<% reviews = [] %>
+		<% try: %>
+		<% 	with open('reviews.txt') as json_file: %>
+		<% 		reviews = json.load(json_file) %>
+		<% end %>
+		<% except: %>
+		<% pass %>
+
+		<% for rev in reviews: %>
+		<form id="form_reviews_{{rev['adress']}}>
+				<h3>{{rev['adress']}}</h3>
+				<p>{{rev['review']}}</p>
+			</form>
+		<% end %>
