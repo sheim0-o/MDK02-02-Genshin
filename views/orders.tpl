@@ -1,8 +1,69 @@
 % rebase('layout.tpl', title=title, year=year)
 
 <html>
-<head>
-<meta charset="latin9">
+ <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+       <title>Çàêàçû</title>
 </head>
-
+<body>
+    <h1>Îôîðìèòü çàêàç</h1>
+    <label>Âàø íèê:
+        <input type="text">
+    </label>
+    <p></p>
+    <label>Âàø èãðîâîé id:
+        <input type="text" placeholder="123456789" size="13">
+    </label>
+    <p></p>
+    <label>Ïî÷òà:
+        <input type="email"  size="22">
+    </label>
+    <fieldset>
+        <legend>Âûáåðèòå æåëàåìûå òîâàðû</legend>
+            <table>
+                <tr>
+                 <td><label>
+                    <input type="checkbox"> "Áëàãîñëîâåíèå ïîëîé ëóíû"
+                  </label></td>
+                  <td><label>
+                    <input type="checkbox"> "Æåì÷óæíûé Ãèìí" (Áîåâîé ïðîïóñê)
+                  </label></td>
+                  <td><label>
+                    <input type="checkbox"> "Æåì÷óæíûé õîð" (Áîåâîé ïðîïóñê)
+                  </label></td>
+                </tr>
+                <tr>
+                  <td><label>
+                    <input type="checkbox"> "Íàáîð ïîääåðæêè"
+                  </label></td>
+                 <td><label>
+                    <input type="checkbox"> "Íàáîð íà÷àëà ïóòåøåñòâèÿ"
+                  </label></td>
+                  <td><label>
+                    <input type="checkbox"> "Íàáîð äàëüíåãî ïóòåøåñòâèÿ"
+                  </label></td>
+                </tr>
+                <tr>
+                  <td><label>
+                    <input type="checkbox"> 300 "Êðèñòàëîâ ñîòâîðåíèÿ"
+                  </label></td>
+                  <td><label>
+                    <input type="checkbox"> 1980 "Êðèñòàëîâ ñîòâîðåíèÿ"
+                  </label></td>
+                  <td><label>
+                    <input type="checkbox"> 6480 "Êðèñòàëîâ ñîòâîðåíèÿ"
+                    </label></td>
+                </tr>
+            </table>
+        <legend></legend>
+    </fieldset>
+    <p>Åñëè âû îôîðìëÿåòå çàêàç äëÿ äðóãîãî ÷åëîâåêà, ìîæåòå îñòàâèòü ïîæåëàíèå, êîòîðîå ïðèäåò åìó íà âíóòðèèãðîâóþ ïî÷òó:</p> 
+    <p><textarea style="width:100%; height:150px;"></textarea></p>
+    <label>Âûáåðèòå æåëàåìóþ äàòó ïîëó÷åíèÿ
+        <input type="date">
+    </label>
+    <p><input type="submit" value="Îôîðìèòü çàêàç" class="btn btn-default"></p>
+</body>
 </html>
