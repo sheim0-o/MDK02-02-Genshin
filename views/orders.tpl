@@ -25,36 +25,54 @@
             <table>
                 <tr>
                  <td><label>
-                    <input type="checkbox"> "Благословение полой луны"
-                  </label></td>
+                    <input type="checkbox"> "Благословение полной луны"
+                  </label>
+                  <p></p>
+                  <img src="static/Krisimg/moon.jpg"></td>
                   <td><label>
                     <input type="checkbox"> "Жемчужный Гимн" (Боевой пропуск)
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/gimn.png"  style="width:135px; height:215px"></td></td>
                   <td><label>
                     <input type="checkbox"> "Жемчужный хор" (Боевой пропуск)
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/hor.png" style="width:135px; height:215px"></td></td>
                 </tr>
                 <tr>
                   <td><label>
                     <input type="checkbox"> "Набор поддержки"
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/pack1.png"></td></td>
                  <td><label>
                     <input type="checkbox"> "Набор начала путешествия"
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/pack2.png"></td></td>
                   <td><label>
                     <input type="checkbox"> "Набор дальнего путешествия"
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/pack3.png"></td></td>
                 </tr>
                 <tr>
                   <td><label>
                     <input type="checkbox"> 300 "Кристалов сотворения"
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/30.jpg" style="width:250px; height:250px"></td></td>
                   <td><label>
                     <input type="checkbox"> 1980 "Кристалов сотворения"
-                  </label></td>
+                  </label>
+                   <p></p>
+                  <img src="static/Krisimg/1980.jpg" style="width:250px; height:250px"></td></td>
                   <td><label>
                     <input type="checkbox"> 6480 "Кристалов сотворения"
-                    </label></td>
+                    </label>
+                     <p></p>
+                  <img src="static/Krisimg/6480.jpg" style="width:250px; height:250px"></td></td>
                 </tr>
             </table>
         <legend></legend>
