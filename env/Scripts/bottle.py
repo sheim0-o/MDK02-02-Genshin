@@ -1,4 +1,4 @@
-#!D:\guap\MDK_02_02\projects\MDK02-02-Genshin\env\Scripts\python.exe
+#!F:\Диста 20-21\Инструментальные средства\Практическая 2\practice2-2\env\Scripts\python.exe
 # -*- coding: utf-8 -*-
 """
 Bottle is a fast and simple micro-framework for small web applications. It
@@ -976,7 +976,7 @@ class Bottle(object):
                        '<h2>Traceback:</h2>\n<pre>\n%s\n</pre>\n' \
                        % (html_escape(repr(_e())), html_escape(format_exc()))
             environ['wsgi.errors'].write(err)
-            headers = [('Content-Type', 'text/html; charset=UTF-8')]
+            headers = [('Content-Type', 'text/html; charset=latin9')]
             start_response('500 INTERNAL SERVER ERROR', headers, sys.exc_info())
             return [tob(err)]
 
@@ -1453,7 +1453,7 @@ class BaseResponse(object):
     """
 
     default_status = 200
-    default_content_type = 'text/html; charset=UTF-8'
+    default_content_type = 'text/html; charset=latin9'
 
     # Header blacklist for specific response codes
     # (rfc2616 section 10.2.3 and 10.3.5)
@@ -1586,7 +1586,7 @@ class BaseResponse(object):
         writer=lambda x: http_date(x))
 
     @property
-    def charset(self, default='UTF-8'):
+    def charset(self, default='latin9'):
         """ Return the charset specified in the content-type header (default: utf8). """
         if 'charset=' in self.content_type:
             return self.content_type.split('charset=')[-1].split(';')[0].strip()
@@ -2450,7 +2450,7 @@ def _file_iter_range(fp, offset, bytes, maxread=1024*1024):
         yield part
 
 
-def static_file(filename, root, mimetype='auto', download=False, charset='UTF-8'):
+def static_file(filename, root, mimetype='auto', download=False, charset='latin9'):
     """ Open a file in a safe way and return :exc:`HTTPResponse` with status
         code 200, 305, 403 or 404. The ``Content-Type``, ``Content-Encoding``,
         ``Content-Length`` and ``Last-Modified`` headers are set if possible.
