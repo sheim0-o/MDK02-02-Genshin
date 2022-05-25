@@ -4,7 +4,7 @@ import writingProducts
 
 class Test_test_f(unittest.TestCase):
     def test_uncorrected(self):
-        list_id_uncor = ["", "12345678","123","ase"," ","qazwsxedc","098765432112","w2f4"]
+        list_id_uncor = ["", "12345678","123","ase"," ","qazwsxedc","098765432112","w2f4", "38292"]
         flagUncor=False
         for id in  list_id_uncor:
             if writingProducts.check_Id(id):
