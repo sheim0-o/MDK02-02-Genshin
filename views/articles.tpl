@@ -110,6 +110,19 @@
 <script>
 	function customClickButton(){
 		var list = document.getElementById("list");
+		for(var i = 0; i<size;i++){
+                let newRow = document.createElement("tr");
+                for(var j = 0; j<size;j++){
+                    let cell = document.createElement("input");
+                    cell.setAttribute("id", "TBL_" + i + "_" + j);
+                    cell.setAttribute("name", "TBL_" + i + "_" + j);
+                    cell.setAttribute("value", arr[i][j]);
+                    cell.setAttribute("size", "2");
+                    cell.setAttribute("style", "background-color: #302a44; color: #FFFFFF");
+                    newRow.appendChild(cell);
+                }
+                table.appendChild(newRow);
+            }
 
 	}
 </script>
