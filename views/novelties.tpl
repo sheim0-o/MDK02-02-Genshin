@@ -10,10 +10,11 @@
 		<div id = paragraph>
 			<p id = text-style><b>Дополнить список обновлений</b></p>
 			<p id = text-style>Введите номер обновления (по формату N.NN):</p> 
-			<input type="text" placeholder="Обязательное поле">
+			<input type="text" placeholder="Обязательное поле" pattern="^[0-9]+.[0-9]{1,2,3}$">
 			<p></p>
 			<p id = text-style>Введите информацию об обновлении:</p>
 			<p><textarea  rows="10" cols="50" name="QUEST" placeholder="Начните писать"></textarea></p> 
+			<p><input type="submit" value="Отправить" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
 		</div>
 
 		<div id = paragraph>
