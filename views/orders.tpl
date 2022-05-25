@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, year=year)
+% rebase( 'layout.tpl', title=title, year=year, warn = warn)
 % import json
 
 <html>
@@ -9,6 +9,12 @@
        <title>Заказы</title>
 </head>
 <body>
+    <% if warn == "1": %>
+        <p>Ошибка почты</p>
+    <% end %>
+    <% if warn == "2": %>
+        <p>Ошибка Id</p>
+    <% end %>
     <h1>Оформить заказ</h1>
     <form action="/home" method="post" >
         <label>Ваш ник:
@@ -20,7 +26,7 @@
         </label>
         <p></p>
         <label>Почта:
-            <input type="email"  size="22" name="EMAIL">
+            <input type="text"  size="22" name="EMAIL">
         </label>
         <fieldset>
             <legend>Выберите желаемые товары</legend>
@@ -96,9 +102,18 @@
 		<% pass %>
 		<% end %>
 		<% if len(orders) > 0: %>
-            <p>{{orders}}</p>
-        <% else: %>
-            <p>хуюсто</p>
+            <% for i in range(len(orders)): %>
+				<% nick = orders[i]['Nick'] %>
+                <% id = orders[i]['ID'] %>
+                <% email = orders[i]['Email'] %>
+                <% message = orders[i]['message'] %>
+                <% date = orders[i]['date'] %>
+                <% products = orders[i]['products'] %>
+                <p>Пользователь: {{nick}} {{id}} {{email}}</p>
+                <p>Заказ: {{products}} на {{date}} </p>
+                <p>Сообщение: {{message}}</p>
+                <p></p>
+            <% end %>
         <% end %>
 </body>
 </html>
