@@ -1,4 +1,5 @@
 % rebase('layout.tpl', title=title, year=year)
+% import json
 
 <html>
  <head>
@@ -96,6 +97,8 @@
 		<% end %>
 		<% if len(orders) > 0: %>
             <p>{{orders}}</p>
+        <% else: %>
+            <p>хуюсто</p>
         <% end %>
 </body>
 </html>
