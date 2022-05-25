@@ -1,7 +1,8 @@
-from bottle import post, request
-import json
+from bottle import post, request, view
+import json, datetime
 
 @post('/home', method='post')
+@view('orders')
 def writing():
     listPr = []
     nick = request.forms.get('NICK') #получаем данные с формы
@@ -32,3 +33,8 @@ def writing():
     listPr.append({'Nick': nick, 'ID': id, 'Email': email, 'message':message, 'date':date, 'products':products})
     with open('products.txt', 'w',encoding='latin1') as outfile:
         json.dump(listPr, outfile, ensure_ascii=False, indent = 1)
+    return dict(
+        title='Orders',
+        message='Your application description page.',
+        year=datetime.datetime.now().year
+    )
