@@ -1,4 +1,5 @@
 % rebase('layoutNovelties.tpl', title=title, year=year)
+%import json
 
 <html>
 <head>
@@ -9,7 +10,12 @@
 	<div class="note__wrap">
 		<div class="note">
 			<ul id="list" class="note__sidebar">
-				
+				<% out = [] %>
+				<% with open('articles.json', encoding='latin1') as json_file: %>
+					<% out = json.load(json_file) %>
+				<% for art in out: %>
+					<li data-index="{{ art['id'] }}" title="{{ art['title'] }}" class="note__tab">{{ art['title'] }}</li>
+				<% end %>
 			</ul>
 			<div class="note__content-wrap">
 				<div class="note__content">
