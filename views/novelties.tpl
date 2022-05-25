@@ -1,4 +1,5 @@
 % rebase('layout.tpl', title=title, year=year)
+<% import json %>
 
 <html>
 	<head>
@@ -6,7 +7,7 @@
 	</head>
 
 	<body>
-	    <form action="/novelties" method="post">
+	    <form action="/home" method="post">
 			<h2 id = text-style-header>Актуальные новинки и список версий игры</h2>
 			<div id = paragraph>
 				<p id = text-style><b>Дополнить список обновлений</b></p>
@@ -14,7 +15,7 @@
 				<p><input type="text" name="MAIL" placeholder="Обязательное поле" id="mail" 
 				pattern="^[a-zA-Z0-9_.+-]+@[a-z]+.[a-z]{2,3}$"></p>
 				<p id = text-style>Введите номер обновления (по формату N.NN):</p> 
-				<input type="text" name="BUMBERUPDATE" placeholder="Обязательное поле" pattern="^[0-9]+.[0-9]{1,2,3}$">
+				<input type="text" name="NUMBERUPDATE" placeholder="Обязательное поле" pattern="^[0-9]+.[0-9]{1,3}$">
 				<p></p>
 				<p id = text-style>Введите информацию об обновлении:</p>
 				<p><textarea name="TEXT" rows="10" cols="50" name="QUEST" placeholder="Начните писать"></textarea></p> 
@@ -24,6 +25,27 @@
 
 		<div id = paragraph>
 			<p id = text-style><b>Также вы можете ознакомиться со сформированным списком обновлений:</b></p>
+			<% news = [] %>
+			<% try: %>
+				<% with open('novelties.txt',encoding='latin1') as json_file: %>
+					<% news = json.load(json_file) %>
+			<% end %>
+			<% except: %>
+				<% pass %>
+			<% end %>
+			<% if len(news) > 0: %>
+				<% for i in range(len(news)): %>
+					<p id = text-style>Версия: {{news[i]['number']}}</p>
+					<textarea disabled id = text-style>
+						<% for j in range(len(news[i]['text'])): %>
+							{{news[i]['text'][j]}}
+						<% end %>
+					</textarea>
+					<p>Последнее изменение произвел: {{news[i]['mail']}}</p>
+					<p>Дата последнего изменения: {{news[i]['date']}}</p>
+					<br></br>
+				<% end %>
+			<% end %>
 		</div>
 	</body>
 
