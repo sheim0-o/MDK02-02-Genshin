@@ -85,5 +85,17 @@
         </label>
         <p><input type="submit" value="ќформить заказ" class="btn btn-default"></p>
     </form>
+    <h3> ќформленные заказы: </h3>
+		<% orders = [] %>
+		<% try: %>
+		<% with open('products.txt',encoding='latin1') as json_file: %>
+			<% orders = json.load(json_file) %>
+		<% end %>
+		<% except: %>
+		<% pass %>
+		<% end %>
+		<% if len(orders) > 0: %>
+            <p>{{orders}}</p>
+        <% end %>
 </body>
 </html>
