@@ -18,9 +18,12 @@ def writing():
     ks300  = str(request.forms.get('KS300'))
     ks1980  = str(request.forms.get('KS1980'))
     ks6480  = str(request.forms.get('KS6480'))
+
     products = moon + ", " + bp1  + ", " + bp2 + ", " + pack1 + ", " + pack2 + ", " + pack3 + ", " + ks300  + ", " + ks1980 + ", " + ks6480
     products = products.replace(", None", "")
+    products = products.replace("None,", "")
     products =" ".join(products.split())
+
     try:
         with open('products.txt',encoding='latin1') as json_file:
             listPr = json.load(json_file)
