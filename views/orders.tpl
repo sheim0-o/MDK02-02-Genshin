@@ -3,12 +3,14 @@
 
 <html>
  <head>
+ <!-- Заголовок и связка с файлом стиля !-->
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
        <title>Заказы</title>
 </head>
 <body>
+<!-- Основные текстовые поля и обработка ошибок ввода  !-->
     <p></p>
     <h1>Оформить заказ</h1>
     <form action="/home" method="post" >
@@ -32,6 +34,7 @@
         <label>Почта:
             <input type="text"  size="22" name="EMAIL">
         </label>
+        <!-- Чекбоксы с товарами  !-->
         <fieldset>
             <legend>Выберите желаемые товары</legend>
                 <table>
@@ -114,6 +117,7 @@
         </label>
         <p><input type="submit" value="Оформить заказ" class="btn btn-default"></p>
     </form>
+    <!-- Вывод из файла прошлых данных  !-->
     <h3> Оформленные заказы: </h3>
     <legend></legend>
 		<% orders = [] %>

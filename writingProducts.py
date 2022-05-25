@@ -22,14 +22,17 @@ def writing():
     ks1980  = str(request.forms.get('KS1980'))
     ks6480  = str(request.forms.get('KS6480'))
 
+     #проверка полей через регулярные выражения и на пустоту
     if check_mail(email) == False:
         warning = 2
 
     if check_Id(id) == False:
         warning = 3
+
     if nick == "":
         warning = 1
 
+         #если ошиибок нет, записываем данные в файл и возвращаемся на основную страницу
     if warning == 0:
         products = moon + ", " + bp1  + ", " + bp2 + ", " + pack1 + ", " + pack2 + ", " + pack3 + ", " + ks300  + ", " + ks1980 + ", " + ks6480
         products = products.replace(", None", "")
@@ -50,6 +53,7 @@ def writing():
             year=datetime.datetime.now().year,
             warn = "0"
         )
+     #в ином случае возвращаемся на страницу и выводим ошибки
     else:
          return dict(
                 title='Orders',
