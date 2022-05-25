@@ -8,6 +8,9 @@
 <body>
 	<div class="note__wrap">
 		<div class="note">
+			<ul id="list" class="note__sidebar">
+				
+			</ul>
 			<div class="note__content-wrap">
 				<div class="note__content">
 					<h2 class="note__title"> Полезная статья </h2>
@@ -84,7 +87,14 @@
 				</div>
 			</div>
 		</div>
-	</dib>
+	</div>
 </body>
+
+<script>
+	function customClickButton(){
+		var list = document.getElementById("list");
+
+	}
+</script>
 
 </html>

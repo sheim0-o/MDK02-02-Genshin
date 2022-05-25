@@ -292,7 +292,7 @@ A:hover {
     width: 756px;
     height: 878px;
     margin-top: 131px;
-    margin-left: auto;
+    margin-left: -25px;
     background-image: url(../img/note_articles.png);
     background-position: center;
     background-size: cover;
@@ -305,6 +305,41 @@ A:hover {
     width: 605px;
     margin-left: 110px;
     margin-top: 53px;
+}
+
+
+.note__sidebar {
+    margin-top: 170px;
+    margin-left: 87px;
+}
+
+.note__tab {
+    width: 310px;
+    height: 56px;
+    background-image: url(../img/tab.png);
+    background-position: center;
+    background-size: cover;
+    transform: translateX(0);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    line-height: 56px;
+    color: #ffe9cd;
+    padding-left: 50px;
+    box-sizing: border-box;
+    margin-bottom: 0.2rem;
+    transition: all .2s ease-out;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 32px;
+}
+
+.note__tab--active {
+    background-image: url(../img/tab_active.png);
+    color: #211e1b;
+    transform: translateX(20px);
+    pointer-events: none;
 }
 
 
@@ -325,10 +360,14 @@ A:hover {
     }
 
     .section::-webkit-scrollbar-track {
-        background-color: #e4e4e4;
+        background-color: rgb(228 228 228 / 0.65);
         border-radius: 10px;
     }
     .section::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background-image: linear-gradient(180deg,#D6C4AE 99%,#D6C4AE 99%);
     }
+
+ul, li {
+    list-style: none;
+}

@@ -99,6 +99,8 @@
     <Content Include="static\img\separator.png" />
     <Content Include="static\img\sword.png" />
     <Content Include="static\img\T9OPysYB1Wk.png" />
+    <Content Include="static\img\tab.png" />
+    <Content Include="static\img\tab_active.png" />
     <Content Include="static\img\Wn0CrYWSK34.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
