@@ -96,6 +96,7 @@
     <Content Include="static\img\f2d6a3a.png" />
     <Content Include="static\img\note_articles.png" />
     <Content Include="static\img\QuIQcwdWBmY.png" />
+    <Content Include="static\img\separator.png" />
     <Content Include="static\img\sword.png" />
     <Content Include="static\img\T9OPysYB1Wk.png" />
     <Content Include="static\img\Wn0CrYWSK34.png" />
@@ -115,6 +116,9 @@
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
     <Content Include="views\articles.tpl" />
+    <Content Include="views\layoutNovelties.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\lore.tpl" />
     <Content Include="views\novelties.tpl" />
     <Content Include="views\orders.tpl" />
