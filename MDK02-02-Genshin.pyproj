@@ -35,6 +35,9 @@
     <Compile Include="articleProcessor.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="articles.json">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
