@@ -247,6 +247,32 @@ guide__title {
     padding-left: 0px;
 }
 
+#box {
+    resize: both;
+    display: inline-block;
+    overflow: auto;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+/* Стиль для всего "базового" текста */
+#text-style {
+    font-family: 'Roboto';
+    font-size: 20pt;
+}
+
+/* Стиль для текста заголовков */
+#text-style-header {
+    font-family: 'Roboto';
+    font-size: 30pt;
+}
+
+/* Отступы между абзацами */
+#paragraph {
+    margin-top: 50px;
+}
+
+
 
 /* Стиль ссылок */
 A:link {
