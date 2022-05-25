@@ -10,25 +10,25 @@
 </head>
 <body>
     <p></p>
-    <% if warn == "2": %>
-        <p>Некорректный адрес почты!</p>
-    <% end %>
-    <% if warn == "3": %>
-        <p>Некорректный игровой ID!</p>
-    <% end %>
-     <% if warn == "1": %>
-        <p>Укажите ник!</p>
-    <% end %>
     <h1>Оформить заказ</h1>
     <form action="/home" method="post" >
+        <% if warn == "1": %>
+        <p>Укажите ник!</p>
+        <% end %>
         <label>Ваш ник:
             <input type="text" name="NICK">
         </label>
         <p></p>
+        <% if warn == "3": %>
+        <p>Некорректный игровой ID!</p>
+        <% end %>
         <label>Ваш игровой id:
             <input type="text" placeholder="123456789" size="13"  name="ID">
         </label>
         <p></p>
+         <% if warn == "2": %>
+        <p>Некорректный адрес почты!</p>
+        <% end %>
         <label>Почта:
             <input type="text"  size="22" name="EMAIL">
         </label>
@@ -37,54 +37,72 @@
                 <table>
                     <tr>
                      <td align="center"><label>
-                        <input type="checkbox" value="Благословение полной луны" name="MOON"> "Благословение полной луны"    
+                        <input type="checkbox" value="Благословение полной луны" name="MOON" checked> "Благословение полной луны"    
                       </label>
                       <p></p>
-                      <img src="static/Krisimg/moon.jpg" title="30-дневная подписка с ежедневной наградой в 90 камней истока"></td>
+                      <img src="static/Krisimg/moon.jpg" title="30-дневная подписка с ежедневной наградой в 90 камней истока">
+                      <p></p>
+                      <p>499 руб.</p></td>
                       <td align="center"><label>
                         <input type="checkbox"  value="Жемчужный Гимн" name="BP1"> "Жемчужный Гимн" (Боевой пропуск)
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/gimn.png"  style="width:135px; height:215px" title="Расширенные награды боевого пропуска и дополнительное 4* оружие на выбор"></td></td>
+                      <img src="static/Krisimg/gimn.png"  style="width:135px; height:215px" title="Расширенные награды боевого пропуска и дополнительное 4* оружие на выбор">
+                      <p></p>
+                      <p>899 руб.</p></td>
                       <td align="center"><label>
                         <input type="checkbox"  value="Жемчужный Хор" name="BP2"> "Жемчужный хор" (Боевой пропуск)
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/hor.png" style="width:135px; height:215px" title="Все преимущества Жемчужного хора, а также 10 уровней боевого пропуска"></td></td>
+                      <img src="static/Krisimg/hor.png" style="width:135px; height:215px" title="Все преимущества Жемчужного хора, а также 10 уровней боевого пропуска">
+                      <p></p>
+                      <p>1299 руб.</p></td>
                     </tr>
                     <tr>
                       <td align="center"><label>
                         <input type="checkbox" value="Набор поддержки" name="PACK1"> "Набор поддержки"
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/pack1.png" title="Набор из 12 материалов улучшения 2* на выбор"></td></td>
+                      <img src="static/Krisimg/pack1.png" title="Набор из 12 материалов улучшения 2* на выбор">
+                      <p></p>
+                      <p>199 руб.</p></td>
                      <td align="center"><label>
                         <input type="checkbox"  value="Набор начала путешествия" name="PACK2"> "Набор начала путешествия"
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/pack2.png"  title="80 опыта искателя приключений и 40 руды усиления"></td></td>
+                      <img src="static/Krisimg/pack2.png"  title="80 опыта искателя приключений и 40 руды усиления">
+                      <p></p>
+                      <p>299 руб.</p></td>
                       <td align="center"><label>
                         <input type="checkbox" value="Набор дальнего путешествия" name="PACK3"> "Набор дальнего путешествия"
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/pack3.png" title="80 опыта искателя приключений, 40 руды усиления и 1 слабая смола"></td></td>
+                      <img src="static/Krisimg/pack3.png" title="120 опыта искателя приключений, 80 руды усиления и 1 слабая смола">
+                      <p></p>
+                      <p>399 руб.</p></td>
                     </tr>
                     <tr>
                       <td align="center"><label>
                         <input type="checkbox" value="300 Кристалов сотворения" name="KS300"> 300 "Кристалов сотворения"
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/30.jpg" style="width:250px; height:250px" title="Кристаллы сотворения конвертируются в камни истока в соотношении 1:1"></td></td>
+                      <img src="static/Krisimg/30.jpg" style="width:250px; height:250px" title="Кристаллы сотворения конвертируются в камни истока в соотношении 1:1">
+                      <p></p>
+                      <p>599 руб.</p></td>
                       <td align="center"><label>
                         <input type="checkbox" value="1980 Кристалов сотворения" name="KS1980"> 1980 "Кристалов сотворения"
                       </label>
                        <p></p>
-                      <img src="static/Krisimg/1980.jpg" style="width:250px; height:250px" title="Кристаллы сотворения конвертируются в камни истока в соотношении 1:1"></td></td>
+                      <img src="static/Krisimg/1980.jpg" style="width:250px; height:250px" title="Кристаллы сотворения конвертируются в камни истока в соотношении 1:1">
+                      <p></p>
+                      <p>799 руб.</p></td>
                       <td align="center"><label>
                         <input type="checkbox" value="6480 Кристалов сотворения" name="KS6480"> 6480 "Кристалов сотворения"
                         </label>
                          <p></p>
-                      <img src="static/Krisimg/6480.jpg" style="width:250px; height:250px" title="Кристаллы сотворения конвертируются в камни истока в соотношении 1:1"></td></td>
+                      <img src="static/Krisimg/6480.jpg" style="width:250px; height:250px" title="Кристаллы сотворения конвертируются в камни истока в соотношении 1:1">
+                      <p></p>
+                      <p>1499 руб.</p></td>
                     </tr>
                 </table>
             <legend></legend>
@@ -97,6 +115,7 @@
         <p><input type="submit" value="Оформить заказ" class="btn btn-default"></p>
     </form>
     <h3> Оформленные заказы: </h3>
+    <legend></legend>
 		<% orders = [] %>
 		<% try: %>
 		<% with open('products.txt',encoding='latin1') as json_file: %>
