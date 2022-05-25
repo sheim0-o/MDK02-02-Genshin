@@ -1,8 +1,149 @@
-% rebase('layout.tpl', title=title, year=year)
+% rebase( 'layout.tpl', title=title, year=year, warn = warn)
+% import json
 
 <html>
-<head>
-<meta charset="latin9">
+ <head>
+ <!-- Çàãîëîâîê è ñâÿçêà ñ ôàéëîì ñòèëÿ !-->
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+       <title>Çàêàçû</title>
 </head>
-
+<body>
+<!-- Îñíîâíûå òåêñòîâûå ïîëÿ è îáðàáîòêà îøèáîê ââîäà  !-->
+    <p></p>
+    <h1>Îôîðìèòü çàêàç</h1>
+    <form action="/home" method="post" >
+        <% if warn == "1": %>
+        <p>Óêàæèòå íèê!</p>
+        <% end %>
+        <label>Âàø íèê:
+            <input type="text" name="NICK">
+        </label>
+        <p></p>
+        <% if warn == "3": %>
+        <p>Íåêîððåêòíûé èãðîâîé ID!</p>
+        <% end %>
+        <label>Âàø èãðîâîé id:
+            <input type="text" placeholder="123456789" size="13"  name="ID">
+        </label>
+        <p></p>
+         <% if warn == "2": %>
+        <p>Íåêîððåêòíûé àäðåñ ïî÷òû!</p>
+        <% end %>
+        <label>Ïî÷òà:
+            <input type="text"  size="22" name="EMAIL">
+        </label>
+        <!-- ×åêáîêñû ñ òîâàðàìè  !-->
+        <fieldset>
+            <legend>Âûáåðèòå æåëàåìûå òîâàðû</legend>
+                <table>
+                    <tr>
+                     <td align="center"><label>
+                        <input type="checkbox" value="Áëàãîñëîâåíèå ïîëíîé ëóíû" name="MOON" checked> "Áëàãîñëîâåíèå ïîëíîé ëóíû"    
+                      </label>
+                      <p></p>
+                      <img src="static/Krisimg/moon.jpg" title="30-äíåâíàÿ ïîäïèñêà ñ åæåäíåâíîé íàãðàäîé â 90 êàìíåé èñòîêà">
+                      <p></p>
+                      <p>499 ðóá.</p></td>
+                      <td align="center"><label>
+                        <input type="checkbox"  value="Æåì÷óæíûé Ãèìí" name="BP1"> "Æåì÷óæíûé Ãèìí" (Áîåâîé ïðîïóñê)
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/gimn.png"  style="width:135px; height:215px" title="Ðàñøèðåííûå íàãðàäû áîåâîãî ïðîïóñêà è äîïîëíèòåëüíîå 4* îðóæèå íà âûáîð">
+                      <p></p>
+                      <p>899 ðóá.</p></td>
+                      <td align="center"><label>
+                        <input type="checkbox"  value="Æåì÷óæíûé Õîð" name="BP2"> "Æåì÷óæíûé õîð" (Áîåâîé ïðîïóñê)
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/hor.png" style="width:135px; height:215px" title="Âñå ïðåèìóùåñòâà Æåì÷óæíîãî õîðà, à òàêæå 10 óðîâíåé áîåâîãî ïðîïóñêà">
+                      <p></p>
+                      <p>1299 ðóá.</p></td>
+                    </tr>
+                    <tr>
+                      <td align="center"><label>
+                        <input type="checkbox" value="Íàáîð ïîääåðæêè" name="PACK1"> "Íàáîð ïîääåðæêè"
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/pack1.png" title="Íàáîð èç 12 ìàòåðèàëîâ óëó÷øåíèÿ 2* íà âûáîð">
+                      <p></p>
+                      <p>199 ðóá.</p></td>
+                     <td align="center"><label>
+                        <input type="checkbox"  value="Íàáîð íà÷àëà ïóòåøåñòâèÿ" name="PACK2"> "Íàáîð íà÷àëà ïóòåøåñòâèÿ"
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/pack2.png"  title="80 îïûòà èñêàòåëÿ ïðèêëþ÷åíèé è 40 ðóäû óñèëåíèÿ">
+                      <p></p>
+                      <p>299 ðóá.</p></td>
+                      <td align="center"><label>
+                        <input type="checkbox" value="Íàáîð äàëüíåãî ïóòåøåñòâèÿ" name="PACK3"> "Íàáîð äàëüíåãî ïóòåøåñòâèÿ"
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/pack3.png" title="120 îïûòà èñêàòåëÿ ïðèêëþ÷åíèé, 80 ðóäû óñèëåíèÿ è 1 ñëàáàÿ ñìîëà">
+                      <p></p>
+                      <p>399 ðóá.</p></td>
+                    </tr>
+                    <tr>
+                      <td align="center"><label>
+                        <input type="checkbox" value="300 Êðèñòàëîâ ñîòâîðåíèÿ" name="KS300"> 300 "Êðèñòàëîâ ñîòâîðåíèÿ"
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/30.jpg" style="width:250px; height:250px" title="Êðèñòàëëû ñîòâîðåíèÿ êîíâåðòèðóþòñÿ â êàìíè èñòîêà â ñîîòíîøåíèè 1:1">
+                      <p></p>
+                      <p>599 ðóá.</p></td>
+                      <td align="center"><label>
+                        <input type="checkbox" value="1980 Êðèñòàëîâ ñîòâîðåíèÿ" name="KS1980"> 1980 "Êðèñòàëîâ ñîòâîðåíèÿ"
+                      </label>
+                       <p></p>
+                      <img src="static/Krisimg/1980.jpg" style="width:250px; height:250px" title="Êðèñòàëëû ñîòâîðåíèÿ êîíâåðòèðóþòñÿ â êàìíè èñòîêà â ñîîòíîøåíèè 1:1">
+                      <p></p>
+                      <p>799 ðóá.</p></td>
+                      <td align="center"><label>
+                        <input type="checkbox" value="6480 Êðèñòàëîâ ñîòâîðåíèÿ" name="KS6480"> 6480 "Êðèñòàëîâ ñîòâîðåíèÿ"
+                        </label>
+                         <p></p>
+                      <img src="static/Krisimg/6480.jpg" style="width:250px; height:250px" title="Êðèñòàëëû ñîòâîðåíèÿ êîíâåðòèðóþòñÿ â êàìíè èñòîêà â ñîîòíîøåíèè 1:1">
+                      <p></p>
+                      <p>1499 ðóá.</p></td>
+                    </tr>
+                </table>
+            <legend></legend>
+        </fieldset>
+        <p>Åñëè âû îôîðìëÿåòå çàêàç äëÿ äðóãîãî ÷åëîâåêà, ìîæåòå îñòàâèòü ïîæåëàíèå, êîòîðîå ïðèäåò åìó íà âíóòðèèãðîâóþ ïî÷òó:</p> 
+        <p><textarea style="width:100%; height:150px;" name="MESSAGE"></textarea></p>
+        <label>Âûáåðèòå æåëàåìóþ äàòó ïîëó÷åíèÿ
+            <input type="date" name="DATE" value="2022-05-26">
+        </label>
+        <p><input type="submit" value="Îôîðìèòü çàêàç" class="btn btn-default"></p>
+    </form>
+    <!-- Âûâîä èç ôàéëà ïðîøëûõ äàííûõ  !-->
+    <h3> Îôîðìëåííûå çàêàçû: </h3>
+    <legend></legend>
+		<% orders = [] %>
+		<% try: %>
+		<% with open('products.txt',encoding='latin1') as json_file: %>
+			<% orders = json.load(json_file) %>
+		<% end %>
+		<% except: %>
+		<% pass %>
+		<% end %>
+		<% if len(orders) > 0: %>
+            <% for i in range(len(orders)): %>
+				<% nick = orders[i]['Nick'] %>
+                <% id = orders[i]['ID'] %>
+                <% email = orders[i]['Email'] %>
+                <% message = orders[i]['message'] %>
+                <% date = orders[i]['date'] %>
+                <% products = orders[i]['products'] %>
+                <p><b>Ïîëüçîâàòåëü:</b> {{nick}} <b>ID:</b> {{id}} <b>Ïî÷òà:</b>{{email}}</p>
+                <p><b>Çàêàç:</b> {{products}} <b>íà</b> {{date}} </p>
+                <% if message != "": %>
+                <p>Ñîîáùåíèå:</p>
+                <p><textarea disabled>{{message}}</textarea></p>
+                <% end %>
+                <p></p>
+            <% end %>
+        <% end %>
+</body>
 </html>
