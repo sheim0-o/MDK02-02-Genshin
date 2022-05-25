@@ -33,6 +33,12 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="routes.py" />
+    <Compile Include="testOrderID.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testOrderMails.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="writingProducts.py">
       <SubType>Code</SubType>
     </Compile>

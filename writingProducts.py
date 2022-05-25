@@ -23,10 +23,12 @@ def writing():
     ks6480  = str(request.forms.get('KS6480'))
 
     if check_mail(email) == False:
-        warning = 1;
+        warning = 2
 
     if check_Id(id) == False:
-        warning = 2;
+        warning = 3
+    if nick == "":
+        warning = 1
 
     if warning == 0:
         products = moon + ", " + bp1  + ", " + bp2 + ", " + pack1 + ", " + pack2 + ", " + pack3 + ", " + ks300  + ", " + ks1980 + ", " + ks6480
@@ -42,8 +44,7 @@ def writing():
         listPr.append({'Nick': nick, 'ID': id, 'Email': email, 'message':message, 'date':date, 'products':products})
         with open('products.txt', 'w',encoding='latin1') as outfile:
             json.dump(listPr, outfile, ensure_ascii=False, indent = 1)
-        return dict(
-            
+        return dict( 
             title='Orders',
             message='Your application description page.',
             year=datetime.datetime.now().year,
@@ -51,7 +52,6 @@ def writing():
         )
     else:
          return dict(
-                
                 title='Orders',
                 message='Your application description page.',
                 year=datetime.datetime.now().year,

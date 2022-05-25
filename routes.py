@@ -69,7 +69,7 @@ def orders():
         title='Orders',
         message='Your application description page.',
         year=datetime.now().year,
-         warn = "0"
+        warn = "0"
     )
 
 @route('/novelties')
