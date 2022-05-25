@@ -88,6 +88,17 @@
 			</div>
 		</div>
 	</div>
+	<div class="navbar-collapse collapse">
+		<form id="form_user_review">
+				<h3> Написать статью </h3>
+				<p><input type="text" name="AUTHOR" placeholder="Название статьи" id="author"></p>
+				<p><textarea input type="text" rows="3" cols="100" name="TITLE" placeholder="Статья" id="title"></textarea></p> 
+				<p><input type="text" name="AUTHOR" placeholder="Введите автора" id="author"></p>
+				<p><input type="text" name="PHONE" placeholder="Введите номер телефона..." id="phone" 
+				pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Введите номер телефона в указанном формате - +#(###)###-##-##"></p>
+				<p><input type="submit" value="Создать" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
+		</form>
+	</div>
 </body>
 
 <script>
