@@ -33,6 +33,9 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="routes.py" />
+    <Compile Include="writingProducts.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -45,6 +48,9 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="products.txt">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
