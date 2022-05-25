@@ -9,11 +9,11 @@
 		<h2 id = text-style-header>Актуальные новинки и список версий игры</h2>
 		<div id = paragraph>
 			<p id = text-style><b>Дополнить список обновлений</b></p>
-			<p id = text-style>Введите номер обновления:</p> 
-			<input type="text">
+			<p id = text-style>Введите номер обновления (по формату N.NN):</p> 
+			<input type="text" placeholder="Обязательное поле">
 			<p></p>
 			<p id = text-style>Введите информацию об обновлении:</p>
-			<p><textarea  rows="10" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
+			<p><textarea  rows="10" cols="50" name="QUEST" placeholder="Начните писать"></textarea></p> 
 		</div>
 
 		<div id = paragraph>
