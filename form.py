@@ -1,7 +1,8 @@
-from bottle import post, request, get
+from bottle import post, request, get, route, view
 import json, datetime
 
 @post('/user_review', method='post')
+@view('reviews')
 def review_form():
     mail = request.forms.get('MAIL')
     phone = request.forms.get('PHONE')
@@ -29,4 +30,7 @@ def review_form():
     
     with open('reviews.txt', 'w',encoding='latin1') as outfile:
         json.dump(reviews, outfile)
-    return "Thanks! The answer will be sent to the mail"
+    return dict(
+        title='Reviews',
+        year=datetime.datetime.now().year
+    )

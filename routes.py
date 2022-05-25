@@ -49,7 +49,6 @@ def regions():
 def rewiews():
     return dict(
         title='Reviews',
-        message='Your application description page.',
         year=datetime.now().year
     )
 

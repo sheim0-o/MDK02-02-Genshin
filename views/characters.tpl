@@ -3,11 +3,10 @@
 	<header_char>
 		<!-- Çàãîëîâîê ñòðàíèöû -->
 		<head>
-
-				<meta charset="latin9">
-				<h1>Ïåðñîíàæè</h1>
-			   <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-				<li><a href="https://genshin-impact.fandom.com/ru/wiki/Genshin_Impact_Âèêè">Èíôîðìàöèÿ î ïåðñîíàæàõ</a></li>
+		    <meta charset="latin9">
+			<h1>Ïåðñîíàæè</h1>
+			<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+			<li><a href="https://genshin-impact.fandom.com/ru/wiki/Genshin_Impact_Âèêè">Èíôîðìàöèÿ î ïåðñîíàæàõ</a></li>
 		</head>
 		<!-- Îñíîâíîå òåëî ñàéòà (ñîñòîèò èç áëîêîâ, ñîäåðæàùèõ èçîáðàæåíèÿ, çàãîëîâêè è òåêñò) -->
 		<body id="characters">
