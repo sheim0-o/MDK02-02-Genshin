@@ -1,9 +1,10 @@
 from bottle import post, request, get, route, template, view
-import json, datetime
+import json, datetime, re
 
 
 @post('/home', method="post")
 @view('novelties')
+
 def nov():
     numberUpdate = str(request.forms.get('NUMBERUPDATE'))
     eMail = str(request.forms.get('MAIL'))
@@ -41,5 +42,17 @@ def nov():
         message='Your application description page.',
         year=datetime.datetime.now().year)
     
-    # Перенаправление на существующую страницу
-    # return template("novelties", eMail = eMail, text = text, numberUpdate = numberUpdate)
+
+regularMail = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+') # вводим регулярное выражения
+def check_mail(mail): # проверяем почту на соответсвие шаблону
+    if re.fullmatch(regularMail, mail): # Определяет соответствие строки указанному шаблону.
+        return bool(True);
+    else:
+        return bool(False);
+
+regularVersion = re.compile(r'[0-9]{1,2}[.][0-9]{1,3}')
+def check_version(version): # проверяем почту на соответсвие шаблону
+    if re.fullmatch(regularVersion, version): # Определяет соответствие строки указанному шаблону.
+        return bool(True);
+    else:
+        return bool(False);

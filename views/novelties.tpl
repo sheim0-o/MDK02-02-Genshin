@@ -27,16 +27,16 @@
 			<p id = text-style><b>Также вы можете ознакомиться со сформированным списком обновлений:</b></p>
 			<% news = [] %>
 			<% try: %>
-			<% with open('novelties.txt',encoding='latin1') as json_file: %>
-				<% news = json.load(json_file) %>
-			<% end %>
+				<% with open('novelties.txt',encoding='latin1') as json_file: %>
+					<% news = json.load(json_file) %>
+				<% end %>
 			<% except: %>
-			<% pass %>
+				<% pass %>
 			<% end %>
 			<% if len(news) > 0: %>
 				<% for i in range(len(news)): %>
 					<p id = text-style>Версия: {{news[i]['number']}}</p>
-					<textarea disabled>
+					<textarea id = text-style disabled>
 						<% for j in range(len(news[i]['text'])): %>
 							{{news[i]['text'][j]}}
 						<% end %>

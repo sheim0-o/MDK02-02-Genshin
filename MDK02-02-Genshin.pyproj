@@ -36,6 +36,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="test_novelties_version.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_novelties_mail.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
