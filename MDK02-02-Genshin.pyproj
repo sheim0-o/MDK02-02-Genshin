@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>MDK02-02-Genshin</Name>
     <RootNamespace>MDK02-02-Genshin</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>
     </WebBrowserPort>
   </PropertyGroup>
@@ -41,6 +41,7 @@
     <Folder Include="static\images\" />
     <Folder Include="static\images\row\" />
     <Folder Include="static\images2\" />
+    <Folder Include="static\img\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
@@ -84,6 +85,20 @@
     <Content Include="static\images2\paimon.png" />
     <Content Include="static\images2\rayden.jpg" />
     <Content Include="static\images2\syao.jpg" />
+    <Content Include="static\img\09cac33.png" />
+    <Content Include="static\img\349Sdla.png" />
+    <Content Include="static\img\3523safa.png" />
+    <Content Include="static\img\615c72a.png" />
+    <Content Include="static\img\77bb3df.png" />
+    <Content Include="static\img\A0VV_2nHfpo.png" />
+    <Content Include="static\img\background_articles.jpg" />
+    <Content Include="static\img\EVJRQPEuLWc.png" />
+    <Content Include="static\img\f2d6a3a.png" />
+    <Content Include="static\img\note_articles.png" />
+    <Content Include="static\img\QuIQcwdWBmY.png" />
+    <Content Include="static\img\sword.png" />
+    <Content Include="static\img\T9OPysYB1Wk.png" />
+    <Content Include="static\img\Wn0CrYWSK34.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
