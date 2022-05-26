@@ -342,6 +342,13 @@ A:hover {
     pointer-events: none;
 }
 
+.limiter {
+    width: 554px; /* Ширина блока */
+    padding: 10px; /* Поля */
+    font-size: 1.5em; /* Размер шрифта */
+    word-wrap: break-word; /* Перенос слов */
+}
+
 
 .section {
     max-height: 575px;
@@ -349,10 +356,11 @@ A:hover {
     overflow-y: auto;
     direction: ltr;
 }
-    .section h2{
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    .section h2 {
+        scroll-snap-align: start;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
 
     .section::-webkit-scrollbar {
