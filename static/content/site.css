@@ -354,6 +354,7 @@ A:hover {
     max-height: 575px;
     padding: 1rem;
     overflow-y: auto;
+    overflow-x: hidden;
     direction: ltr;
 }
     .section h2 {
@@ -375,6 +376,8 @@ A:hover {
         border-radius: 10px;
         background-image: linear-gradient(180deg,#D6C4AE 99%,#D6C4AE 99%);
     }
+
+
 
 ul, li {
     list-style: none;
