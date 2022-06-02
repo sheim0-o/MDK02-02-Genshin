@@ -44,6 +44,8 @@
 						<p><input type="text" name="AUTHOR" placeholder="Введите автора" id="author" minlength="5" required></p>
 						<p><input type="text" name="PHONE" placeholder="Введите номер телефона..." id="phone" 
 						pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" required title="Введите номер телефона в указанном формате - +#(###)###-##-##"></p>
+						<p><input type="text" name="eMAIL" placeholder="Введите почту" id="email" 
+						pattern="([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+" required></p>
 						<p><input type="submit" value="Создать" class="btn btn-default" id="btn"></p>
 					</form>
 				</div>
