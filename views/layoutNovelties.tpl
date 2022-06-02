@@ -37,10 +37,6 @@
 
     <div>
         {{!base}}
-        <hr />
-        <footer>
-            <p>&copy; {{ year }} - Genshin</p>
-        </footer>
     </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>

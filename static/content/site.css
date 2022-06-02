@@ -253,6 +253,29 @@ A:hover {
     color: white; /* ÷вет  ссылки */
 }
 
+.container_horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.editor__wrap {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../img/77bb3df.png);
+    color: #634827;
+    font-size: 16px;
+}
+
+.editor__content {
+    width:340px;
+    height:340px;
+    margin-left: 60px;
+    margin-top: 35px;
+    max-width: 100%;
+}
+
 
 .note {
     position: relative;
@@ -292,7 +315,7 @@ A:hover {
     width: 756px;
     height: 878px;
     margin-top: 131px;
-    margin-left: -25px;
+    margin-left: -70px;
     background-image: url(../img/note_articles.png);
     background-position: center;
     background-size: cover;
@@ -382,3 +405,9 @@ A:hover {
 ul, li {
     list-style: none;
 }
+
+textarea {
+    width: 90%;
+    height: 75px; 
+    resize: none; 
+} 

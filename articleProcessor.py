@@ -1,5 +1,5 @@
 from bottle import post, request, view
-import json, datetime
+import json, datetime, string
 
 @post('/articles', method="post")
 @view('articles')
@@ -10,6 +10,8 @@ def nov():
     phone = str(request.forms.get('PHONE'))
     date = datetime.datetime.now() 
     out = []
+    articles = articles.replace("\n", "<br>");
+    articles = articles.replace('\r', "<br>");
     with open('articles.json', encoding='latin1') as json_file:
         out = json.load(json_file)
         out.append({'id': len(out), 'date': date.strftime("%x") + " " + date.strftime("%X"), 'title': title, 'text': str(articles), 'author': author, 'phone': phone})
